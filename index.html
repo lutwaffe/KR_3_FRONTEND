@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Vitaliy Shop — Каталог</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Vitaliy Shop</a>
+
+      <nav id="site-nav" class="nav" aria-label="Главная навигация">
+        <ul class="nav__list" aria-hidden="true">
+          <li><a href="index.html" class="nav__link" aria-current="page">Каталог</a></li>
+          <li><a href="cart.html" class="nav__link">Корзина <span id="cart-badge" aria-live="polite" class="badge">0</span></a></li>
+          <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+          <li><a href="images.html" class="nav__link">Галерея</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">☰</button>
+    </div>
+  </header>
+
+  <main id="main" class="main container" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <h1 id="hero-title" class="section-title">Добро пожаловать в Vitaliy Shop</h1>
+        <p><a class="button" href="#catalog">Перейти к каталогу</a></p>
+      </div>
+
+      <figure class="hero-image" aria-hidden="true">
+        <picture>
+          <source type="image/webp" srcset="images/hero-150.webp 150w, images/hero-200.webp 200w, images/hero-300.webp 300w">
+          <img src="images/hero-300.jpg" alt="Коллекция товаров Vitaliy Shop" width="300" height="200">
+        </picture>
+      </figure>
+    </section>
+
+    <section id="catalog" class="catalog" aria-labelledby="catalog-title">
+      <h2 id="catalog-title" class="section-title">Каталог товаров</h2>
+
+      <div class="products-grid" role="list" aria-live="polite">
+        <article class="product-card" data-id="p1" role="listitem" tabindex="0">
+          <picture>
+            <img src="images/product-1-600.jpg" alt="КРУТОЙ ТЕЛЕФОН VITALA3000" class="product-img">
+          </picture>
+          <h3>КРУТОЙ ТЕЛЕФОН VITALA3000</h3>
+          <p class="product-price"><strong>4 999 ₽</strong></p>
+          <p class="sr-price">Цена: 4999 рублей</p>
+          <p class="product-desc">Просто крутой</p>
+          <div class="product-actions">
+            <button class="button add-to-cart" data-id="p1">Добавить в корзину</button>
+            <a href="product.html?id=p1" class="link">Подробнее</a>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card" data-id="p2" role="listitem" tabindex="0">
+          <img src="images/product-2-600.jpg" alt="Наушники Furry Виталя" class="product-img">
+          <h3>Наушники Furry Виталя</h3>
+          <p class="product-price"><strong>2 499 ₽</strong></p>
+          <p class="sr-price">Цена: 2499 рублей</p>
+          <p class="product-desc">Громкая, компактная, IP67.</p>
+          <div class="product-actions">
+            <button class="button add-to-cart" data-id="p2">Добавить в корзину</button>
+            <a href="product.html?id=p2" class="link">Подробнее</a>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card" data-id="p3" role="listitem" tabindex="0">
+          <img src="images/product-3-600.jpg" alt="Смарт-часы FitPro" class="product-img">
+          <h3>Смарт-часы FitPro</h3>
+          <p class="product-price"><strong>3 199 ₽</strong></p>
+          <p class="sr-price">Цена: 3199 рублей</p>
+          <p class="product-desc">GPS, спорт-режимы, мониторинг пульса.</p>
+          <div class="product-actions">
+            <button class="button add-to-cart" data-id="p3">Добавить в корзину</button>
+            <a href="product.html?id=p3" class="link">Подробнее</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Vitaliy Shop</p>
+    </div>
+  </footer>
+
+  <!-- Accessible modal -->
+  <div id="modal-overlay" class="overlay" hidden></div>
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+       aria-describedby="modal-desc" tabindex="-1" hidden>
+    <h2 id="modal-title">Товар добавлен</h2>
+    <p id="modal-desc">Товар добавлен в корзину.</p>
+
+    <div class="modal-actions">
+      <a href="cart.html" class="button">Перейти в корзину</a>
+      <button id="modal-close" class="button button--ghost">Продолжить покупки</button>
+    </div>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite" class="toast" hidden></div>
+
+  <script src="scripts/scripts.js" defer></script>
+</body>
+</html>
