@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Корзина — Vitaliy Shop</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">Vitaliy Shop</a>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="index.html">Каталог</a></li>
+        <li><a href="cart.html" aria-current="page">Корзина</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="main container">
+  <h1 class="section-title">Ваша корзина</h1>
+
+  <div id="cart-container" aria-live="polite">
+    <p id="empty-cart">Корзина пуста</p>
+
+    <ul id="cart-items" class="cart-items" hidden></ul>
+
+    <div id="cart-summary" class="cart-summary" hidden>
+      <p>Итого: <strong id="cart-total">0 ₽</strong></p>
+      <button id="checkout" class="button">Оформить заказ</button>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container"><p>© 2025 Vitaliy Shop</p></div>
+</footer>
+
+<script src="scripts/scripts.js" defer></script>
+</body>
+</html>
