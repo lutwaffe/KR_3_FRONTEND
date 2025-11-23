@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакты — Vitaliy Shop</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">Vitaliy Shop</a>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="index.html">Каталог</a></li>
+        <li><a href="cart.html">Корзина</a></li>
+        <li><a href="contacts.html" aria-current="page">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="main container">
+  <h1 class="section-title">Свяжитесь с нами</h1>
+
+  <form id="contact-form" class="contact-form" action="#" novalidate>
+    <div class="form-group">
+      <label for="fname">Имя <span aria-hidden="true">*</span></label>
+      <input id="fname" name="fname" type="text" required aria-describedby="fname-error">
+      <div id="fname-error" class="error visually-hidden" role="alert"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="femail">Email <span aria-hidden="true">*</span></label>
+      <input id="femail" name="femail" type="email" required aria-describedby="femail-error femail-help">
+      <div id="femail-help" class="help-text">Мы свяжемся по указанному email.</div>
+      <div id="femail-error" class="error visually-hidden" role="alert"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="fmessage">Сообщение</label>
+      <textarea id="fmessage" name="fmessage" rows="5"></textarea>
+    </div>
+
+    <button class="button" type="submit">Отправить</button>
+
+    <div id="contact-status" role="status" aria-live="polite" class="contact-status visually-hidden"></div>
+  </form>
+</main>
+
+<footer class="site-footer">
+  <div class="container"><p>© 2025 Vitaliy Shop</p></div>
+</footer>
+
+<script src="scripts/scripts.js" defer></script>
+</body>
+</html>
