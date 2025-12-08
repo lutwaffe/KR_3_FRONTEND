@@ -1,4 +1,4 @@
-https://lutwaffe.github.io/KR_3_FRONTEND/
+https://lutwaffe.github.io/Frotend_KR3/
 Отчет по практическим занятиям 17–18
 
           Милютин Максим
